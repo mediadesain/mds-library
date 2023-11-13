@@ -1,20 +1,24 @@
 <h1>Search Pipe</h1>
-<p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
-
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis.</p>
 <hr/>
+
 <div class="margin-b-1">
-    <mds-hightlight-prism [code]="'{{ item | mdsSearch:params }}'" language="html"></mds-hightlight-prism>
+    <mds-hightlight-prism [code]="'
+{{ item | mdsSearch:params }}'" language="html"></mds-hightlight-prism>
 </div>
 
 <div class="mds-grid">
     <div class="g-l-50">
         <b>Sample Data</b>
-        <mds-hightlight-prism [code]="'this.item = '+ (item |json)" language="typescript"></mds-hightlight-prism>
+        <mds-hightlight-prism [heightHighlight]="500" [code]="'
+this.item = '+ (item |json)" language="typescript"></mds-hightlight-prism>
     </div>
     <div class="g-l-50">
         <b>Params</b>
-        <mds-hightlight-prism [code]="'this.params = '+ (params|json)" language="typescript"></mds-hightlight-prism>
+        <mds-hightlight-prism [code]="'
+this.params = '+ (params|json)" language="typescript"></mds-hightlight-prism>
         <b>Output</b>
-        <mds-hightlight-prism [code]="item| mdsSearch:params |json" language="typescript"></mds-hightlight-prism>
+        <mds-hightlight-prism [code]="'
+'+(item| mdsSearch:params |json)" language="typescript"></mds-hightlight-prism>
     </div>
 </div>

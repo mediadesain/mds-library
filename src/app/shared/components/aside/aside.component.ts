@@ -64,4 +64,10 @@ export class AsideComponent {
   ];
   // constructor() { }
 
+  resetScroll(){
+    document.getElementById('article').scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 }

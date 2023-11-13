@@ -19,7 +19,7 @@
 <h2 class="padding-b-1">Generator</h2>
 <b>Preview:</b>
 <div class="margin-b-1" style="height: 300px; border: 1px dashed rgb(100 100 100 / 40%);">
-    <div [class]="'mds-grid '+ horizontalLayout.value +' '+verticalLayout.value+' sample'">
+    <div [class]="'mds-grid '+ horizontalLayout.value +' '+verticalLayout.value+' sample'" style="height: 300px;">
         <div class="{{item1.value}}{{itemmed1.value === 'unset' ? '' : ' '+itemmed1.value}}{{itemsm1.value === 'unset' ? '' : ' '+itemsm1.value}}">1</div>
         <div class="{{item2.value}}{{itemmed2.value === 'unset' ? '' : ' '+itemmed2.value}}{{itemsm2.value === 'unset' ? '' : ' '+itemsm2.value}}">2</div>
         <div class="{{item3.value}}{{itemmed3.value === 'unset' ? '' : ' '+itemmed3.value}}{{itemsm3.value === 'unset' ? '' : ' '+itemsm3.value}}">3</div>
@@ -139,7 +139,8 @@
 
     <div class="g-m-70">
         <b>Code Preview:</b>
-        <mds-hightlight-prism [code]="'<!-- Grid Wrapper -->
+        <mds-hightlight-prism [code]="'
+<!-- Grid Wrapper -->
 <div class=\'mds-grid '+horizontalLayout.value+' '+verticalLayout.value+'\'>
     <!-- Grid Items Here-->
     <div class=\''+(item1.value)+(itemmed1.value==='unset'?'':' '+itemmed1.value)+(itemsm1.value==='unset'?'':' '+itemsm1.value)+'\'>1</div>
@@ -183,7 +184,8 @@
 
 <h2>Sample</h2>
 <b>Code Preview:</b>
-<mds-hightlight-prism [code]="'<div class=\'mds-grid justify-center align-middle\'>
+<mds-hightlight-prism [code]="'
+<div class=\'mds-grid justify-center align-middle\'>
     <div *ngFor=\'let item of items\' class=\'g-s-50 g-m-25 g-l-20\'>
         ...
     </div>

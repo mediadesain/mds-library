@@ -2,14 +2,16 @@
     <b>{{group.title}}:</b>
     <ul>
         <!--[routerLinkActiveOptions]="{exact: true}"-->
-        <li routerLinkActive="active" *ngFor="let link of group.links"><a [routerLink]="link.url" [innerHTML]="link.text"></a></li>
+        <li routerLinkActive="active" *ngFor="let link of group.links" (click)="resetScroll()"><a [routerLink]="link.url" [innerHTML]="link.text"></a></li>
     </ul>
 </div>
 <div class="list-group">
     <b>Version</b>
     <small>
         <ul>
-            <li><a style="color: var(--swatch-a);" target="_blank" href="https://www.npmjs.com/package/medes-ui"><i class="fas fa-external-link-alt"></i> v.13.0.2 <i>(Latest Release)</i></a></li>
+            <li><a style="color: var(--swatch-a);" target="_blank" href="https://www.npmjs.com/package/medes-ui"><i class="fas fa-external-link-alt"></i> Latest Release</a></li>
+            <li><a style="color: var(--swatch-a);" target="_blank" href="https://www.npmjs.com/package/medes-ui"><i class="fas fa-external-link-alt"></i> v.13.0.3 <i>(Patch Version)</i></a></li>
+            <li><a style="color: var(--swatch-a);" target="_blank" href="https://github.com/mediadesain/medes-ui-boilerplate/blob/main/CHANGELOG.md"><i class="fas fa-external-link-alt"></i> Changelog</a></li>
             <!-- <li><a style="color: var(--swatch-a);" target="_blank" href="https://github.com/mediadesain/medes-ui-boilerplate/tree/main/dist/medes-ui"><i class="fas fa-external-link-alt"></i> v0.0.4-beta.x <i>(Beta)</i></a></li> -->
         </ul>
     </small>

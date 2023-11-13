@@ -12,11 +12,11 @@
         <th>Function and data Type</th><th>Data Type</th><th>Default Value</th><th>Description</th>
     </tr>
     <tr *ngFor="let item of [
-        {'attribute':'countUniqueValues( <b>array</b> )', 'value':'array of string', 'default': '∞', 'description':'Count unique value inside string of array'},
-        {'attribute':'sumValues( <b>array</b> )', 'value':'array of number', 'default': '∞', 'description':'Sum all number inside of array'},
-        {'attribute':'filterMultiple( <b>array</b>, <b>string</b>, <b>array</b> )', 'value':'<ul><li>array</li><li>string</li><li>array of string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li><li>∞</li></ul>','description':'<ul><li>Sample data list</li><li>String of Key/prop to show on filter list</li><li>Values will show base on key/prop.</li></ul>'},
-        {'attribute':'groupValues( <b>array</b>, <b>string</b> )', 'value':'<ul><li>array</li><li>string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li></ul>', 'description':'<ul><li>Sample data list</li><li>String of Key/prop to make it as key.</li></ul>'},
-        {'attribute':'arrayTolistObject( <b>array</b>, <b>string</b> )', 'value':'<ul><li>array</li><li>string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li></ul>', 'description':'<ul><li>Sample data list</li><li>String of Key/prop to make it as Object Key.</li></ul>'}
+        {attribute: 'countUniqueValues( <b>array</b> )', 'value':'array of string', 'default': '∞', description: 'Count unique value inside string of array'},
+        {attribute: 'sumValues( <b>array</b> )', 'value':'array of number', 'default': '∞', description: 'Sum all number inside of array'},
+        {attribute: 'filterMultiple( <b>array</b>, <b>string</b>, <b>array</b> )', 'value':'<ul><li>array</li><li>string</li><li>array of string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li><li>∞</li></ul>',description: '<ul><li>Sample data list</li><li>String of Key/prop to show on filter list</li><li>Values will show base on key/prop.</li></ul>'},
+        {attribute: 'groupValues( <b>array</b>, <b>string</b> )', 'value':'<ul><li>array</li><li>string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li></ul>', description: '<ul><li>Sample data list</li><li>String of Key/prop to make it as key.</li></ul>'},
+        {attribute: 'arrayTolistObject( <b>array</b>, <b>string</b> )', 'value':'<ul><li>array</li><li>string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li></ul>', description: '<ul><li>Sample data list</li><li>String of Key/prop to make it as Object Key.</li></ul>'}
     ]">
         <td mds-th-title="Function"><span [innerHTML]="item.attribute"></span></td>
         <td mds-th-title="Data Type"><span [innerHTML]="item.value"></span></td>

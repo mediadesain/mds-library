@@ -32,21 +32,22 @@
 <b>Properties</b>
 <table class="mds-table">
     <tr>
-        <th>Attribute</th><th>Data Type</th><th>Default</th><th>Description</th>
+        <th>Attribute</th><th>Data Type</th><th>Default</th><th>Description</th><th>Support Version</th>
     </tr>
     <tr *ngFor="let item of [
-        {'attribute':'id', 'type':'string', 'default':'∞', 'description':'id modal is required for identify which modal to trigger'},
-        {'attribute':'modalWidth?', 'type':'string of option: <i>\'small\'|\'medium\'|\'large\'|\'fullscreen\'</i> or number', 'default':'\'medium\'', 'description':'Width of modal by default is medium (700px) but posible with custom width. If set as \'fullscreen\' wil set height & width fullscreen'},
-        {'attribute':'marginTop?', 'type':'number', 'default':'44', 'description':'Padding top modal'},
-        {'attribute':'marginBottom?', 'type':'number', 'default':'44', 'description':'Padding bottom modal'},
-        {'attribute':'borderRadius?', 'type':'number', 'default':'5', 'description':'Border radius size'},
-        {'attribute':'hideCloseButton?', 'type':'boolean', 'default':'false', 'description':'Visibility of close button'},
-        {'attribute':'disableCloseBackdrop?', 'type':'boolean', 'default':'false', 'description':'Disable closing modal if clicking backdrop'},
+        {attribute: 'id', type: 'string', default: '∞', description: 'id modal is required for identify which modal to trigger', version: 'medes-ui@14.0.0 >'},
+        {attribute: 'modalWidth?', type: 'string of option: <i>\'small\'|\'medium\'|\'large\'|\'fullscreen\'</i> or number', default: '\'medium\'', description: 'Width of modal by default is medium (700px) but posible with custom width. If set as \'fullscreen\' wil set height & width fullscreen', version: 'medes-ui@14.0.0 >'},
+        {attribute: 'marginTop?', type: 'number', default: '44', description: 'Padding top modal', version: 'medes-ui@14.0.0 >'},
+        {attribute: 'marginBottom?', type: 'number', default: '44', description: 'Padding bottom modal', version: 'medes-ui@14.0.0 >'},
+        {attribute: 'borderRadius?', type: 'number', default: '5', description: 'Border radius size', version: 'medes-ui@14.0.0 >'},
+        {attribute: 'hideCloseButton?', type: 'boolean', default: 'false', description: 'Visibility of close button', version: 'medes-ui@14.0.0 >'},
+        {attribute: 'disableCloseBackdrop?', type: 'boolean', default: 'false', description: 'Disable closing modal if clicking backdrop', version: 'medes-ui@14.0.0 >'},
     ]">
         <td mds-th-title="Attribute" [innerHTML]="item.attribute"></td>
         <td mds-th-title="Data Type" [innerHTML]="item.type"></td>
         <td mds-th-title="Default" [innerHTML]="item.default"></td>
         <td mds-th-title="Description" [innerHTML]="item.description"></td>
+        <td mds-th-title="Support Version" [innerHTML]="item.version"></td>
     </tr>
 </table>
 <small>

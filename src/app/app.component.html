@@ -1,9 +1,11 @@
-<mds-navbar></mds-navbar>
-<content>
-  <mds-aside></mds-aside>
+<mds-navbar class="fullfill-horizontal flex-horizontal flex-nowarp align-center justify-between"></mds-navbar>
+<content class="fullfill-horizontal fullfill-vertical flex-horizontal justify-between flex-nowarp no-scroll">
+  <mds-aside class="scroll-vertical"></mds-aside>
   <article>
-    <div class="container">
-      <main><div class="main"><router-outlet></router-outlet></div></main>
+    <div id="article" class="container fullfill-vertical fullfill-horizontal flex-vertical flex-nowarp scroll-vertical">
+      <main class="fullfill-horizontal">
+          <router-outlet></router-outlet>
+      </main>
       <mds-footer></mds-footer>
     </div>
   </article>

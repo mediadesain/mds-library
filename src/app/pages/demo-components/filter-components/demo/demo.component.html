@@ -3,8 +3,10 @@
 <hr/>
 
 <div class="mds-grid">
+    <!-- SIDEBAR CONTENT -->
     <div class="g-l-30">
-        <!-- Filter Checkboxes Component - Multiple Group -->
+        <input #name="ngModel" [ngModelOptions]="{ updateOn: 'submit' }" ngModel placeholder="Search Name" style="width: 100%; margin-bottom: 1em;" />
+        <!-- Demo Filter Checkboxes Component - Multiple Group -->
         <mds-filter-checkbox
             [titlegroup]="'Filter by'"
             [filterData]="sampledata"
@@ -14,33 +16,35 @@
             [hideCounter]="false"
         ></mds-filter-checkbox>
 
-        <!-- Filter Swatch Component - Multiple Group -->
+        <!-- Demo Filter Swatch Component -->
         <mds-filter-swatch
             [titlegroup]="'Filter by Color'"
             [filterData]="sampledata"
-            [filterBy]="key"
+            [filterBy]="'color'"
             [filterSelected]="selected"
             [swatchMapping]="colormap"
         ></mds-filter-swatch>
         
-        <!-- Filter Checkboxes Component - Single Group -->
+        <!-- Demo Filter Checkboxes Component - Single Group -->
         <mds-filter-checkbox
             [filterData]="sampledata"
             [filterBy]="['brand']"
             [filterSelected]="selected"
-            [hideCounter]="false"
+            [hideCounter]="true"
         ></mds-filter-checkbox>
 
-        <!-- Reset Filter Component -->
+        <!-- Demo Reset Filter Component -->
         <mds-filter-reset [content]="'Reset All'" [(filterSelected)]="selected"></mds-filter-reset>
     </div>
+    <!-- MAIN ITEMS CONTENT -->
     <div class="g-l-70">
         <div style="text-align: center;">
-            <small *ngIf="(sampledata|mdsFilter:selected).length === 0 && (selected|json) ==='{}'">No Data Found</small>
-            <small *ngIf="(sampledata|mdsFilter:selected).length === 0 && (selected|json) !=='{}'">Filtered data not found</small>
+            <small *ngIf="(sampledata|mdsFilter:selected|mdsSearch:{propertyKey:'name', keyword:name.value}).length === 0 && (selected|json) ==='{}'">No Data Found</small>
+            <small *ngIf="(sampledata|mdsFilter:selected|mdsSearch:{propertyKey:'name', keyword:name.value}).length === 0 && (selected|json) !=='{}'">Filtered data not found</small>
         </div>
-        <div class="mds-grid">
-            <div class="g-s-50 g-l-25" *ngFor="let item of (sampledata|mdsFilter:selected)">
+        <div class="mds-grid horizontal-center">
+            <!-- Demo mdsFilter & mdsSearch Pipes-->
+            <div class="g-s-50 g-m-30 g-l-25" *ngFor="let item of (sampledata|mdsFilter:selected|mdsSearch:{propertyKey:'name', keyword:name.value})">
                 <!-- Image with MedesUI Image Loader Element-->
                 <div class="mds-img-loader square">
                     <img [src]="item.picture" [alt]="item.name">

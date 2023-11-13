@@ -1,5 +1,6 @@
 <h1>Reset Filter Components</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis.</p>
+<hr/>
 
 <div class="mds-grid">
     <div class="g-l-70">
@@ -11,3 +12,26 @@
         <mds-filter-reset [class]="'btn btn-primary'" [content]="'Reset All'" [(filterSelected)]="selected"></mds-filter-reset>
     </div>
 </div>
+
+<b>Properties</b>
+<table class="mds-table">
+    <tr>
+        <th>Attribute</th><th>Data Type</th><th>Default</th><th>Description</th><th>Support Version</th>
+    </tr>
+    <tr *ngFor="let item of [
+        {attribute: 'filterSelected', type: 'Array', default: '∞', description: 'Sample data for create swatch filter', version: 'medes-ui@13.0.0 >'},
+        {attribute: 'class?', type: 'String', default: '∞', description: 'Classes list for button', version: 'medes-ui@13.0.0'},
+        {attribute: 'content?', type: 'String', default: '\'Reset Filter\'', description: 'Label content for reset button', version: 'medes-ui@14.0.1 >'}
+    ]">
+        <td mds-th-title="Attribute">{{item.attribute}}</td>
+        <td mds-th-title="Data Type">{{item.type}}</td>
+        <td mds-th-title="Default">{{item.default}}</td>
+        <td mds-th-title="Description">{{item.description}}</td>
+        <td mds-th-title="Support version">{{item.version}}</td>
+    </tr>
+</table>
+<small>
+    <b>Notes:</b>
+    <br/><i>? = Is optional value, if no value will use default value.</i>
+    <br/><i>∞ = Anything base on type</i>
+</small>

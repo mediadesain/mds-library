@@ -1,5 +1,6 @@
 <h1>Swatch Components</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis.</p>
+<hr/>
 
 <div class="mds-grid">
     <div class="g-l-12">
@@ -27,21 +28,22 @@
 <b>Properties</b>
 <table class="mds-table">
     <tr>
-        <th>Attribute</th><th>Data Type</th><th>Default</th><th>Description</th>
+        <th>Attribute</th><th>Data Type</th><th>Default</th><th>Description</th><th>Support Version</th>
     </tr>
     <tr *ngFor="let item of [
-        {'attribute':'filterData', 'type':'Array', 'default':'∞', 'description':'Sample data for create swatch filter'},
-        {'attribute':'filterBy', 'type':'String', 'default':'∞', 'description':'Key/properties to filter'},
-        {'attribute':'filterSelected', 'type':'Object', 'default':'∞', 'description':'List of selected filter'},
-        {'attribute':'swatchMapping', 'type':'Object of key values', 'default':'∞', 'description':'Listing of key/prop and color hex value'},
-        {'attribute':'titlegroup?', 'type':'String', 'default':'Color', 'description':'Label text of swatch filter group'},
-        {'attribute':'swatchSize?', 'type':'Number', 'default':'30', 'description':'Size of weight & height'},
-        {'attribute':'swatchRadius?', 'type':'Number', 'default':'0', 'description':'Border radius size'}
+        {attribute: 'filterData', type: 'Array', default: '∞', description: 'Sample data for create swatch filter', version: 'medes-ui@13.0.0 >'},
+        {attribute: 'filterBy', type: 'String', default: '∞', description: 'Key/properties to filter', version: 'medes-ui@13.0.0 >'},
+        {attribute: 'filterSelected', type: 'Object', default: '∞', description: 'List of selected filter', version: 'medes-ui@13.0.0 >'},
+        {attribute: 'swatchMapping', type: 'Object of key values', default: '∞', description: 'Listing of key/prop and color hex value', version: 'medes-ui@13.0.0 >'},
+        {attribute: 'titlegroup?', type: 'String', default: 'Color', description: 'Label text of swatch filter group', version: 'medes-ui@13.0.0 >'},
+        {attribute: 'swatchSize?', type: 'Number', default: '30', description: 'Size of weight & height', version: 'medes-ui@13.0.0 >'},
+        {attribute: 'swatchRadius?', type: 'Number', default: '0', description: 'Border radius size', version: 'medes-ui@13.0.0 >'}
     ]">
         <td mds-th-title="Attribute">{{item.attribute}}</td>
         <td mds-th-title="Data Type">{{item.type}}</td>
         <td mds-th-title="Default">{{item.default}}</td>
         <td mds-th-title="Description">{{item.description}}</td>
+        <td mds-th-title="Support Version">{{item.version}}</td>
     </tr>
 </table>
 <small>

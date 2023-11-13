@@ -76,7 +76,8 @@
     </div>
     <div class="g-l-70">
         <b>Code</b>
-        <mds-hightlight-prism [code]="'<div style=\'background: var(--swatch-a); color: var(--swatch-a-contrast);padding: 0 1em;\'>
+        <mds-hightlight-prism [code]="'
+<div style=\'background: var(--swatch-a); color: var(--swatch-a-contrast);padding: 0 1em;\'>
     <p>Sample Text</p>
 </div>'" language="html"></mds-hightlight-prism>
     </div>
@@ -158,6 +159,7 @@ http://doc.mediadesain.com/introduction/color-scheme */
 </div>
 
 <h3 class="margin-horizontal-start1">Include Custom Color Scheme</h3>
-<mds-hightlight-prism [code]="'/*-- MedesUI --*/
-@import \'~medes-ui/assets/scss/medes-ui.scss\';
+<mds-hightlight-prism [code]="'
+/*-- MedesUI --*/
+@import \'node_modules/medes-ui/assets/scss/medes-ui.scss\';
 @import \'./assets/style/ui-colorscheme.scss\'; // Here is your custom your own color scheme'" language="scss"></mds-hightlight-prism>
