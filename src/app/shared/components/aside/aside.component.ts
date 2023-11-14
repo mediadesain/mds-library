@@ -64,10 +64,11 @@ export class AsideComponent {
   ];
   // constructor() { }
 
-  resetScroll(){
+  resetScroll(): void {
     document.getElementById('article').scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   }
+  
 }

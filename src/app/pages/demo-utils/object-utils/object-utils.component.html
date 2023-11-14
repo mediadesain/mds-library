@@ -9,15 +9,16 @@
 <b>Object utils details:</b>
 <table class="mds-table">
     <tr>
-        <th>Function and data Type</th><th>Data Type</th><th>Default Value</th><th>Description</th>
+        <th>Function and data Type</th><th>Data Type</th><th>Default Value</th><th>Description</th><th>Support Version</th>
     </tr>
     <tr *ngFor="let item of [
-        {attribute: 'removeKeysIfEmpty( <b>object</b> )', 'value': 'Object', 'default': '∞', description: 'Object prop/key will delete if there is no value <i>(undefined, null, empty string)</i>.'}
+        {attribute: 'removeKeysIfEmpty( <b>object</b> )', 'value': 'Object', 'default': '∞', description: 'Object prop/key will delete if there is no value <i>(undefined, null, empty string)</i>.', version: 'medes-ui@0.0.1 >'}
     ]">
         <td mds-th-title="Function"><span [innerHTML]="item.attribute"></span></td>
         <td mds-th-title="Data Type"><span [innerHTML]="item.value"></span></td>
         <td mds-th-title="Data Type"><span [innerHTML]="item.default"></span></td>
         <td mds-th-title="Description"><span [innerHTML]="item.description"></span></td>
+        <td mds-th-title="Support Version"><span [innerHTML]="item.version"></span></td>
     </tr>
 </table>
 <small>

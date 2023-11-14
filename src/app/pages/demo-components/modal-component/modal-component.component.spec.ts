@@ -1,20 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DemoFilterPipeComponent } from '../../demo-pipe/demo-filter-pipe/demo-filter-pipe.component';
 
-import { ModalComponent } from './modal-component.component';
-
-describe('ModalComponent', () => {
-  let component: ModalComponent;
-  let fixture: ComponentFixture<ModalComponent>;
+describe('DemoFilterPipeComponent', () => {
+  let component: DemoFilterPipeComponent;
+  let fixture: ComponentFixture<DemoFilterPipeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalComponent ]
+      declarations: [ DemoFilterPipeComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ModalComponent);
+    fixture = TestBed.createComponent(DemoFilterPipeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

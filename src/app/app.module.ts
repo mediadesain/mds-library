@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { AsideComponent } from './shared/components/aside/aside.component';
+import { VersioningComponent } from './shared/components/versioning/versioning.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    AsideComponent
+    AsideComponent,
+    VersioningComponent
   ],
   imports: [
     BrowserModule,

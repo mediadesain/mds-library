@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DemoPrismjsHighlightComponent } from './pages/demo-components/prismjs-highlight/prismjs-highlight.component';
+import { VersioningComponent } from './shared/components/versioning/versioning.component';
 
 const routes: Routes = [
   {
     path: 'introduction',
-    loadChildren: () => import('./pages/introduction/introduction.module').then(m => m.IntroductionModule)
+    loadChildren: () => import('./pages/introduction/introduction.module').then(m => m.IntroductionModule),
   }, {
     path: 'ui-boilerplate',
     loadChildren: () => import('./pages/demo-ui-boilerplate/ui-boilerplate.module').then(m => m.MdsDocBoilerplateModule)
@@ -18,10 +20,13 @@ const routes: Routes = [
   { path: 'pipe', loadChildren: () => import('./pages/demo-pipe/pipe.module').then(m => m.PipeModule) },
   {
     path: 'prismjs-highlight',
-    loadChildren: () => import('./pages/demo-components/prismjs-highlight/prismjs-highlight.module').then(m => m.PrismjsHighlightModule)
+    component: DemoPrismjsHighlightComponent
   },
   {
     path: 'utils', loadChildren: () => import('./pages/demo-utils/demo-utils.module').then(m => m.DemoUtilsModule)
+  },{
+    path: 'versioning',
+    component: VersioningComponent
   },
   {
     path: '**', redirectTo: 'introduction/how-to-install'

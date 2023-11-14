@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
 import { FilterComponentsRoutingModule } from './filter-components-routing.module';
 import { FilterComponentsComponent } from './filter-components.component';
 import { CheckboxesComponent } from './checkboxes/checkboxes.component';
@@ -30,5 +28,6 @@ import { FormsModule } from '@angular/forms';
     MdsFilterModule,
     MdsPipesModule
   ]
+
 })
 export class FilterComponentsModule { }

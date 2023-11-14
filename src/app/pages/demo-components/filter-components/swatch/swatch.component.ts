@@ -1,9 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { MdsFilterSwatchComponent, MdsHightlightPrismModule } from 'medes-ui';
 import { SampleProductsData } from 'src/app/shared/constant/products';
+
 @Component({
   selector: 'mds-swatch',
   templateUrl: './swatch.component.html',
-  styleUrls: ['./swatch.component.scss']
+  styleUrls: ['./swatch.component.scss'],
+  standalone: true,
+  imports: [CommonModule, MdsHightlightPrismModule, MdsFilterSwatchComponent]
 })
 export class SwatchComponent implements OnInit {
   sampledata: {
@@ -27,7 +32,8 @@ export class SwatchComponent implements OnInit {
     gold: '#b6ab66'
   };
 
-samplecomponent = `export class MyComponent implements OnInit {
+samplecomponent = `
+export class MyComponent implements OnInit {
 ...
   // Sample datas, keys to filter and filter selected
   sampledata: any[] = [
@@ -48,7 +54,8 @@ samplecomponent = `export class MyComponent implements OnInit {
   };
 ...
 }`;
-componentdemo = `<!-- Filter Swatch Component -->
+componentdemo = `
+<!-- Filter Swatch Component -->
 <mds-filter-swatch
   [titlegroup]="'Filter by Color'"
   [filterData]="sampledata"

@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "prismjs"
+            ],
             "outputPath": "dist/medes-ui-boilerplate",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -119,8 +122,9 @@
       }
     }
   },
-  "defaultProject": "medes-ui-boilerplate",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

@@ -5,7 +5,7 @@ import { HowToInstallComponent } from './how-to-install/how-to-install.component
 import { IntroductionComponent } from './introduction.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'info' },
+  { path: '', redirectTo: 'info', pathMatch: 'full' },
   { path: 'info', component: IntroductionComponent },
   { path: 'how-to-install', component: HowToInstallComponent },
   { path: 'color-scheme', component: ColorSchemeComponent }

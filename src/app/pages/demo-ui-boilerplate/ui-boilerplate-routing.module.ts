@@ -6,7 +6,7 @@ import { MdsDocBoilerplateComponent } from './ui-boilerplate.component';
 import { LayoutUtilsComponent } from './layout-utils/layout-utils.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'basic-elements' },
+  { path: '', redirectTo: 'basic-elements', pathMatch: 'full'  },
   { path: 'basic-elements', component: MdsDocBoilerplateComponent },
   { path: 'grid-system', component: GridSystemComponent },
   { path: 'layout-utils', component: LayoutUtilsComponent },

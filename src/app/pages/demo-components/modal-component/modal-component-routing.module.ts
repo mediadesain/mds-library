@@ -5,7 +5,7 @@ import { DemoModalComponent } from './demo-modal/demo-modal.component';
 import { ModalComponentDetailComponent } from './modal-component-detail/modal-component-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'intro' },
+  { path: '', redirectTo: 'intro', pathMatch: 'full' },
   { path: 'intro', component: ModalComponent },
   { path: 'detail', component: ModalComponentDetailComponent },
   { path: 'demo', component: DemoModalComponent }

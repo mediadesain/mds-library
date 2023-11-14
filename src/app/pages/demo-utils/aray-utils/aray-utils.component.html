@@ -9,19 +9,20 @@
 <b>Object utils details:</b>
 <table class="mds-table">
     <tr>
-        <th>Function and data Type</th><th>Data Type</th><th>Default Value</th><th>Description</th>
+        <th>Function and data Type</th><th>Data Type</th><th>Default Value</th><th>Description</th><th>Support Version</th>
     </tr>
     <tr *ngFor="let item of [
-        {attribute: 'countUniqueValues( <b>array</b> )', 'value':'array of string', 'default': '∞', description: 'Count unique value inside string of array'},
-        {attribute: 'sumValues( <b>array</b> )', 'value':'array of number', 'default': '∞', description: 'Sum all number inside of array'},
-        {attribute: 'filterMultiple( <b>array</b>, <b>string</b>, <b>array</b> )', 'value':'<ul><li>array</li><li>string</li><li>array of string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li><li>∞</li></ul>',description: '<ul><li>Sample data list</li><li>String of Key/prop to show on filter list</li><li>Values will show base on key/prop.</li></ul>'},
-        {attribute: 'groupValues( <b>array</b>, <b>string</b> )', 'value':'<ul><li>array</li><li>string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li></ul>', description: '<ul><li>Sample data list</li><li>String of Key/prop to make it as key.</li></ul>'},
-        {attribute: 'arrayTolistObject( <b>array</b>, <b>string</b> )', 'value':'<ul><li>array</li><li>string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li></ul>', description: '<ul><li>Sample data list</li><li>String of Key/prop to make it as Object Key.</li></ul>'}
+        {attribute: 'countUniqueValues( <b>array</b> )', 'value':'array of string', 'default': '∞', description: 'Count unique value inside string of array', version: 'medes-ui@0.0.1 >'},
+        {attribute: 'sumValues( <b>array</b> )', 'value':'array of number', 'default': '∞', description: 'Sum all number inside of array', version: 'medes-ui@0.0.1 >'},
+        {attribute: 'filterMultiple( <b>array</b>, <b>string</b>, <b>array</b> )', 'value':'<ul><li>array</li><li>string</li><li>array of string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li><li>∞</li></ul>',description: '<ul><li>Sample data list</li><li>String of Key/prop to show on filter list</li><li>Values will show base on key/prop.</li></ul>', version: 'medes-ui@0.0.1 >'},
+        {attribute: 'groupValues( <b>array</b>, <b>string</b> )', 'value':'<ul><li>array</li><li>string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li></ul>', description: '<ul><li>Sample data list</li><li>String of Key/prop to make it as key.</li></ul>', version: 'medes-ui@0.0.1 >'},
+        {attribute: 'arrayTolistObject( <b>array</b>, <b>string</b> )', 'value':'<ul><li>array</li><li>string</li></ul>', 'default': '<ul><li>∞</li><li>∞</li></ul>', description: '<ul><li>Sample data list</li><li>String of Key/prop to make it as Object Key.</li></ul>', version: 'medes-ui@0.0.1 >'}
     ]">
         <td mds-th-title="Function"><span [innerHTML]="item.attribute"></span></td>
         <td mds-th-title="Data Type"><span [innerHTML]="item.value"></span></td>
         <td mds-th-title="Default Value"><span [innerHTML]="item.default"></span></td>
         <td mds-th-title="Description"><span [innerHTML]="item.description"></span></td>
+        <td mds-th-title="Support Version"><span [innerHTML]="item.version"></span></td>
     </tr>
 </table>
 <small>

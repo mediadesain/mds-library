@@ -1,0 +1,20 @@
+<h1>MedesUI versioning and releases</h1>
+<p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+<hr/>
+
+
+<b>Supported Version:</b>
+<table class="mds-table">
+    <tr>
+        <th>Version</th><th>Status</th><th>Released</th>
+    </tr>
+    <tr *ngFor="let item of [
+        { version: '^14.0.2', status: 'Active', released: '2023-11-14' },
+        { version: '^13.0.3', status: 'LTS', released: '2023-11-14' },
+    ]">
+        <td mds-th-title="Version"><span [innerHTML]="item.version"></span></td>
+        <td mds-th-title="Status"><span [innerHTML]="item.status"></span></td>
+        <td mds-th-title="Released"><span [innerHTML]="item.released"></span></td>
+    </tr>
+</table>
+<small>medes-ui v.0.0.1 to v.0.0.3 are no longger supported</small>

@@ -9,17 +9,18 @@
 <b>String utils details:</b>
 <table class="mds-table">
     <tr>
-        <th>Function and data Type</th><th>Data Type</th><th>Default Value</th><th>Description</th>
+        <th>Function and data Type</th><th>Data Type</th><th>Default Value</th><th>Description</th><th>Support Version</th>
     </tr>
     <tr *ngFor="let item of [
-        {attribute: 'rgbToHex( <b>Array</b> )', 'value':'<ul><li>Array of number</li></ul>', 'default': '∞', description: '<ul><li>Sample number of r, g, b.</li></ul>'},
-        {attribute: 'hexToRgba( <b>String</b>, <b>number?</b> )', 'value':'<ul><li>string</li><li>number</li></ul>', 'default': '<ul><li>∞</li><li>1</li></ul>', description: '<ul><li>Sample hex color</li><li>Opacity range between 0 - 1</li></ul>'},
-        {attribute: 'addDarkLight( <b>String</b>, <b>number</b> )', 'value':'<ul><li>string</li><li>number</li></ul>', 'default': '<ul><li>∞</li><li>∞</li></ul>', description: '<ul><li>Sample string to Title Case</li><li>Add positif number for lighter or negative for brighter color</li></ul>'}
+        {attribute: 'rgbToHex( <b>Array</b> )', 'value':'<ul><li>Array of number</li></ul>', 'default': '∞', description: '<ul><li>Sample number of r, g, b.</li></ul>', version: 'medes-ui@0.0.3 >'},
+        {attribute: 'hexToRgba( <b>String</b>, <b>number?</b> )', 'value':'<ul><li>string</li><li>number</li></ul>', 'default': '<ul><li>∞</li><li>1</li></ul>', description: '<ul><li>Sample hex color</li><li>Opacity range between 0 - 1</li></ul>', version: 'medes-ui@0.0.3 >'},
+        {attribute: 'addDarkLight( <b>String</b>, <b>number</b> )', 'value':'<ul><li>string</li><li>number</li></ul>', 'default': '<ul><li>∞</li><li>∞</li></ul>', description: '<ul><li>Sample string to Title Case</li><li>Add positif number for lighter or negative for brighter color</li></ul>', version: 'medes-ui@0.0.3 >'}
     ]">
         <td mds-th-title="Function"><span [innerHTML]="item.attribute"></span></td>
         <td mds-th-title="Data Type"><span [innerHTML]="item.value"></span></td>
         <td mds-th-title="Default Value"><span [innerHTML]="item.default"></span></td>
         <td mds-th-title="Description"><span [innerHTML]="item.description"></span></td>
+        <td mds-th-title="Support Version"><span [innerHTML]="item.version"></span></td>
     </tr>
 </table>
 <small>

@@ -11,8 +11,9 @@ describe('DemoFilterPipeComponent', () => {
       declarations: [ DemoFilterPipeComponent ]
     })
     .compileComponents();
-
+    
     fixture = TestBed.createComponent(DemoFilterPipeComponent);
+
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

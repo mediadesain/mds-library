@@ -1,12 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { MdsModalService } from 'medes-ui';
+import { FormsModule } from '@angular/forms';
+import { MdsHightlightPrismModule, MdsModalModule, MdsModalService } from 'medes-ui';
 /*-- Medes Team Only --*/
-// import { MdsModalService } from 'projects/medes-ui/src/public-api';
+// import { MdsHightlightPrismModule, MdsModalModule, MdsModalService } from 'projects/medes-ui/src/public-api';
 
 @Component({
   selector: 'mds-demo-modal',
   templateUrl: './demo-modal.component.html',
-  styleUrls: ['./demo-modal.component.scss']
+  styleUrls: ['./demo-modal.component.scss'],
+  standalone: true,
+  imports: [CommonModule, FormsModule, MdsHightlightPrismModule, MdsModalModule]
 })
 export class DemoModalComponent implements OnInit {
   bodyText: string;

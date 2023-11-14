@@ -1,13 +1,19 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MdsHightlightPrismModule } from 'medes-ui';
 
 @Component({
   selector: 'mds-aray-utils',
   templateUrl: './aray-utils.component.html',
-  styleUrls: ['./aray-utils.component.scss']
+  styleUrls: ['./aray-utils.component.scss'],
+  standalone: true,
+  imports: [CommonModule, MdsHightlightPrismModule]
 })
 export class ArrayUtilsComponent {
-import = `import { MdsArrayUtils } from 'medes-ui';`;
-demo = `MdsArrayUtils.countUniqueValues(["Web","Web","Web","Web","iOS","iOS","Android","Android","Android"])
+import = `
+import { MdsArrayUtils } from 'medes-ui';`;
+demo = `
+MdsArrayUtils.countUniqueValues(["Web","Web","Web","Web","iOS","iOS","Android","Android","Android"])
 // output {Web: 4, iOS: 2, Android: 3}
 
 MdsArrayUtils.sumValues([5,3,4,56,6,7]);

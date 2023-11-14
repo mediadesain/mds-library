@@ -1,18 +1,22 @@
 import { Component } from '@angular/core';
-import { MdsModalService } from 'medes-ui';
+import { RouterModule } from '@angular/router';
+import { MdsHightlightPrismModule, MdsModalModule, MdsModalService } from 'medes-ui';
 /*-- Medes Team Only --*/
-// import { MdsModalService } from 'projects/medes-ui/src/public-api';
+// import { MdsHightlightPrismModule, MdsModalModule, MdsModalService } from 'projects/medes-ui/src/public-api';
 
 
 @Component({
   selector: 'mds-testing',
   templateUrl: './modal-component.component.html',
-  styleUrls: ['./modal-component.component.scss']
+  styleUrls: ['./modal-component.component.scss'],
+  standalone: true,
+  imports: [RouterModule, MdsHightlightPrismModule, MdsModalModule]
 })
 
 export class ModalComponent {
 
-html = `<button (click)="openModal('my-modal-1')">Open Simple Modal</button>
+html = `
+<button (click)="openModal('my-modal-1')">Open Simple Modal</button>
 
 <mds-modal
   id="my-modal-1"
@@ -24,7 +28,8 @@ html = `<button (click)="openModal('my-modal-1')">Open Simple Modal</button>
   ...
 </mds-modal>`;
 
-importmodule = `import { MdsModalModule } from 'medes-ui';
+importmodule = `
+import { MdsModalModule } from 'medes-ui';
 
 @NgModule({
   declarations: [ ... ],

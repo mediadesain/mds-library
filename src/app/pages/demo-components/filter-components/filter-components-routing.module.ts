@@ -7,7 +7,7 @@ import { ResetAllComponent } from './reset-all/reset-all.component';
 import { SwatchComponent } from './swatch/swatch.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'intro' },
+  { path: '', redirectTo: 'intro', pathMatch: 'full'  },
   { path: 'intro', component: FilterComponentsComponent },
   { path: 'checkboxes', component: CheckboxesComponent },
   { path: 'swatch', component: SwatchComponent },

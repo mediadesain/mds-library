@@ -9,26 +9,36 @@
 <b>Number utils details:</b>
 <table class="mds-table">
     <tr>
-        <th>Function and data Type</th><th>Data Type</th><th>Default Value</th><th>Description</th>
+        <th>Function and data Type</th><th>Data Type</th><th>Default Value</th><th>Description</th><th>Support Version</th>
     </tr>
     <tr *ngFor="let item of [
         {
             attribute: 'shortNumber( <b>number</b>, <b>array?</b> )',
             'value':'<ul><li>number</li><li>Array of String</li></ul>',
             default: '<ul><li>∞</li><li>[\'k\', \'m\', \'b\', \'t\']</li></ul>',
-            description: '<ul><li>Number will sorting</li><li>Sample custom prefix.</li></ul>'
+            description: '<ul><li>Number will sorting</li><li>Sample custom prefix.</li></ul>',
+            version: 'medes-ui@0.0.1 >'
         },
         {
             attribute: 'toCurrency( <b>number</b>, <b>string</b>, <b>number?</b> )',
             'value':'<ul><li>number</li><li>string of option:<br/><i>IDR | JYP | EUR | USD</i></li><li>number</li></ul>',
             default: '<ul><li>∞</li><li>\'USD\'</li><li>∞</li></ul>',
-            description: '<ul><li>Number will sorting</li><li>Type Currency</li><li>Set decimal</li></ul>'
+            description: '<ul><li>Number will sorting</li><li>Type Currency</li><li>Set decimal</li></ul>',
+            version: 'medes-ui@0.0.1 >'
         },
+        {
+            attribute: 'getMinMax( <b>number[]</b>)',
+            'value': 'Array of number',
+            default: '∞',
+            description: 'Array of number and will find the min max value',
+            version: 'medes-ui@14.0.2 >'
+        }
     ]">
         <td mds-th-title="Function"><span [innerHTML]="item.attribute"></span></td>
         <td mds-th-title="Sample Value"><span [innerHTML]="item.value"></span></td>
         <td mds-th-title="Default Value"><span [innerHTML]="item.default"></span></td>
         <td mds-th-title="Description"><span [innerHTML]="item.description"></span></td>
+        <td mds-th-title="Support Version"><span [innerHTML]="item.version"></span></td>
     </tr>
 </table>
 <small>

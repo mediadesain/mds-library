@@ -8,7 +8,7 @@ import { DateUtilsComponent } from './date-utils/date-utils.component';
 import { ColorUtilsComponent } from './color-utils/color-utils.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'string' },
+  { path: '', redirectTo: 'string', pathMatch: 'full' },
   { path: 'string', component: StringUtilsComponent },
   { path: 'number', component: NumberUtilsComponent },
   { path: 'object', component: ObjectUtilsComponent },
