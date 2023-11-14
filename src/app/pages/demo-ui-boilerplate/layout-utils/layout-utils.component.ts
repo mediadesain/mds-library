@@ -1,14 +1,9 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MdsHightlightPrismModule } from 'medes-ui';
 
 @Component({
   selector: 'mds-layout-utils',
   templateUrl: './layout-utils.component.html',
-  styleUrls: ['./layout-utils.component.scss'],
-  standalone: true,
-  imports: [FormsModule, CommonModule, MdsHightlightPrismModule]
+  styleUrls: ['./layout-utils.component.scss']
 })
 export class LayoutUtilsComponent {
   paddingOptions = [

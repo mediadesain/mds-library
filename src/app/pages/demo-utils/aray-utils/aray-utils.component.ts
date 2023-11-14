@@ -1,13 +1,9 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MdsHightlightPrismModule } from 'medes-ui';
 
 @Component({
   selector: 'mds-aray-utils',
   templateUrl: './aray-utils.component.html',
-  styleUrls: ['./aray-utils.component.scss'],
-  standalone: true,
-  imports: [CommonModule, MdsHightlightPrismModule]
+  styleUrls: ['./aray-utils.component.scss']
 })
 export class ArrayUtilsComponent {
 import = `

@@ -1,15 +1,10 @@
-import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { MdsFilterCheckboxComponent, MdsFilterResetComponent, MdsFilterSwatchComponent, MdsHightlightPrismModule } from 'medes-ui';
 import { SampleProductsData } from 'src/app/shared/constant/products';
 
 @Component({
   selector: 'mds-filter-components',
   templateUrl: './filter-components.component.html',
-  styleUrls: ['./filter-components.component.scss'],
-  standalone: true,
-  imports: [RouterModule, JsonPipe,MdsHightlightPrismModule, MdsFilterCheckboxComponent, MdsFilterSwatchComponent, MdsFilterResetComponent]
+  styleUrls: ['./filter-components.component.scss']
 })
 export class FilterComponentsComponent implements OnInit {
   sampledata = [];

@@ -10,22 +10,15 @@
 <b>Properties</b>
 <table class="mds-table">
     <tr>
-        <th>Attribute</th><th>Data Type</th><th>Default</th><th>Description</th><th>Support Version</th>
+        <th>Attribute</th><th>Data Type</th><th>Default</th><th>Description</th>
     </tr>
     <tr *ngFor="let item of [
-        {attribute: 'code', type: 'string', default: '', description: 'Code to hightlight', version: 'medes-ui@13.0.0 >'},
-        {attribute: 'language', type: 'Spesific String, options are:<br/><i>\'html\' | \'markup\' | \'javascript\' | \'typescript\' | \'java\' | \'css\' | \'sass\' | \'scss\' | \'ruby\' | \'swift\' | \'sql\' | \'python\'</i> ', default: '', description: 'Language type to show as prevew code',version: 'medes-ui@13.0.0 >'},
-        {attribute: 'heightHighlight', type: 'number', default: '∞', description: 'Maximal height', version: 'medes-ui@14.0.1 >'}
+        {'attribute':'code*', 'type':'string', 'default':'', 'description':'Code to hightlight'},
+        {'attribute':'language*', 'type':'Spesific String, options are:<br/><i>\'html\' | \'markup\' | \'javascript\' | \'typescript\' | \'java\' | \'css\' | \'sass\' | \'scss\' | \'ruby\' | \'swift\' | \'sql\' | \'python\'</i> ', 'default':'', 'description':'Language type to show as prevew code'}
     ]">
         <td mds-th-title="Attribute">{{item.attribute}}</td>
         <td mds-th-title="Data Type"><span [innerHTML]="item.type"></span></td>
         <td mds-th-title="Default"><span [innerHTML]="item.default"></span></td>
         <td mds-th-title="Description">{{item.description}}</td>
-        <td mds-th-title="Support Version">{{item.version}}</td>
     </tr>
 </table>
-<small>
-    <b>Notes:</b>
-    <br/><i>? = Is optional value, if no value will use default value.</i>
-    <br/><i>∞ = Anything base on type</i>
-</small>

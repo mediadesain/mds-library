@@ -10,6 +10,7 @@ import { DemoComponent } from './demo/demo.component';
 import { MdsHightlightPrismModule, MdsFilterModule, MdsPipesModule } from 'medes-ui';
 // import { MdsHightlightPrismModule, MdsFilterModule, MdsPipesModule } from 'projects/medes-ui/src/public-api';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [

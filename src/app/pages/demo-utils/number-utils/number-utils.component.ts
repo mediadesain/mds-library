@@ -1,13 +1,9 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MdsHightlightPrismModule } from 'medes-ui';
 
 @Component({
   selector: 'mds-number-utils',
   templateUrl: './number-utils.component.html',
-  styleUrls: ['./number-utils.component.scss'],
-  standalone: true,
-  imports: [CommonModule, MdsHightlightPrismModule]
+  styleUrls: ['./number-utils.component.scss']
 })
 export class NumberUtilsComponent {
 import = `

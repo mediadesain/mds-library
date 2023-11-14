@@ -1,15 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MdsFilterCheckboxComponent, MdsFilterPipe, MdsFilterResetComponent, MdsFilterSwatchComponent, MdsHightlightPrismModule, MdsSearchPipe } from 'medes-ui';
 import { SampleProductsData } from 'src/app/shared/constant/products';
 
 @Component({
   selector: 'mds-demo',
   templateUrl: './demo.component.html',
-  styleUrls: ['./demo.component.scss'],
-  standalone: true,
-  imports: [CommonModule, FormsModule, MdsHightlightPrismModule, MdsFilterCheckboxComponent, MdsFilterSwatchComponent, MdsFilterResetComponent, MdsFilterPipe, MdsSearchPipe]
+  styleUrls: ['./demo.component.scss']
 })
 export class DemoComponent implements OnInit {
   sampledata = [];

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DemoPrismjsHighlightComponent } from './pages/demo-components/prismjs-highlight/prismjs-highlight.component';
 import { VersioningComponent } from './shared/components/versioning/versioning.component';
 
 const routes: Routes = [
@@ -20,7 +19,7 @@ const routes: Routes = [
   { path: 'pipe', loadChildren: () => import('./pages/demo-pipe/pipe.module').then(m => m.PipeModule) },
   {
     path: 'prismjs-highlight',
-    component: DemoPrismjsHighlightComponent
+    loadChildren: () => import('./pages/demo-components/prismjs-highlight/prismjs-highlight.module').then(m => m.PrismjsHighlightModule)
   },
   {
     path: 'utils', loadChildren: () => import('./pages/demo-utils/demo-utils.module').then(m => m.DemoUtilsModule)

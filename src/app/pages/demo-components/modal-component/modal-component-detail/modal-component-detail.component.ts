@@ -1,15 +1,12 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { MdsHightlightPrismModule, MdsModalModule, MdsModalService } from 'medes-ui';
+import { MdsModalService } from 'medes-ui';
 /*-- Medes Team Only --*/
 // import { MdsHightlightPrismModule, MdsModalModule, MdsModalService } from 'projects/medes-ui/src/public-api';
 
 @Component({
   selector: 'mds-modal-component-detail',
   templateUrl: './modal-component-detail.component.html',
-  styleUrls: ['./modal-component-detail.component.scss'],
-  standalone: true,
-  imports: [CommonModule, MdsHightlightPrismModule, MdsModalModule]
+  styleUrls: ['./modal-component-detail.component.scss']
 })
 export class ModalComponentDetailComponent implements OnInit {
 html = `
