@@ -1,6 +1,6 @@
 {
   "name": "medes-ui-boilerplate",
-  "version": "13.0.3",
+  "version": "1.13.2",
   "scripts": {
     "ng": "ng",
     "start": "ng lint && ng serve --port 4600",
@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "~13.3.11",
     "@angular/router": "~13.3.11",
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "medes-ui": "^13.0.3",
+    "medes-ui": "^1.13.2",
     "prismjs": "^1.26.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
