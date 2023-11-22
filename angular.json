@@ -117,43 +117,6 @@
           }
         }
       }
-    },
-    "medes-ui": {
-      "projectType": "library",
-      "root": "projects/medes-ui",
-      "sourceRoot": "projects/medes-ui/src",
-      "prefix": "mds",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "projects/medes-ui/tsconfig.lib.json",
-            "project": "projects/medes-ui/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/medes-ui/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/medes-ui/src/test.ts",
-            "tsConfig": "projects/medes-ui/tsconfig.spec.json",
-            "karmaConfig": "projects/medes-ui/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "projects/medes-ui/**/*.ts",
-              "projects/medes-ui/**/*.html"
-            ]
-          }
-        }
-      }
     }
   },
   "defaultProject": "medes-ui-boilerplate",

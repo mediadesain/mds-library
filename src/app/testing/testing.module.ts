@@ -4,9 +4,8 @@ import { CommonModule } from '@angular/common';
 import { TestingRoutingModule } from './testing-routing.module';
 import { TestingComponent } from './testing.component';
 
-// import { MdsPipesModule } from 'medes-ui';
-// import { MdsPipesModule } from 'dist/medes-ui/public-api';
-import { MdsPipesModule } from 'projects/medes-ui/src/public-api';
+import { MdsPipesModule } from 'medes-ui';
+
 @NgModule({
   declarations: [
     TestingComponent

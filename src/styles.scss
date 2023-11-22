@@ -1,11 +1,11 @@
-@import "../projects/medes-ui/assets/scss/medes-ui";
-@import "../projects/medes-ui/assets/scss/ui-colorscheme";
-@import "../projects/medes-ui/assets/scss/layouts/documentation";
+// @import "../projects/medes-ui/assets/scss/medes-ui";
+// @import "../projects/medes-ui/assets/scss/ui-colorscheme";
+// @import "../projects/medes-ui/assets/scss/layouts/documentation";
 /*-- MedesUI --*/
-// @import "~medes-ui/assets/scss/medes-ui";
-// @import "~medes-ui/assets/scss/ui-colorscheme";
-// @import "~medes-ui/assets/scss/layouts/documentation";
-@import "~prismjs/themes/prism-okaidia.min";
+@import "../node_modules/medes-ui/assets/scss/medes-ui";
+@import "../node_modules/medes-ui/assets/scss/ui-colorscheme";
+@import "../node_modules/medes-ui/assets/scss/layouts/documentation";
+@import "../node_modules/prismjs/themes/prism-okaidia.min";
 
 /*-- Custom Style--*/
 navbar .logo, mds-navbar .logo { background-image: url('./assets/images/medes-ui.png'); }
