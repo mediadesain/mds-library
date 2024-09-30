@@ -1,0 +1,67 @@
+<h1>Range Slider Components</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis.</p>
+<hr/>
+
+
+<div class="mds-grid">
+    <div class="g-l-40">
+        <b>Component</b>
+        <mds-hightlight-prism [code]="samplecomponent" language="typescript"></mds-hightlight-prism>
+    </div>
+    <div class="g-l-30">
+        <b>HTML</b>
+        <mds-hightlight-prism [code]="componenthtml" language="html"></mds-hightlight-prism>
+    </div>
+    <div class="g-l-30">
+        <b>Preview</b>
+        <!-- Filter range slider -->
+        <mds-filter-range-slider
+            [label]="'Filter by price'"
+            [min]="filterRangeSelected.min"
+            [max]="filterRangeSelected.max"
+            [(start)]="filterRangeSelected.start"
+            [(end)]="filterRangeSelected.end"
+            [reset]="'<b>✕</b>'">
+        </mds-filter-range-slider>
+        <small><i>Output: {{filterRangeSelected.start}} - {{filterRangeSelected.end}}</i></small>
+        <hr/>
+        <!-- Filter range slider disabled -->
+        <mds-filter-range-slider
+            [label]="'Filter by something <i>(disabled)</i>'"
+            [min]="20"
+            [max]="100"
+            [start]="25"
+            [end]="40"
+            [disabled]="true">
+        </mds-filter-range-slider>
+    </div>
+</div>
+
+
+
+
+<table class="mds-table">
+    <tr>
+        <th>Attribute</th><th>Data Type</th><th>Default</th><th>Description</th><th style="min-width: 200px;">Support Version</th>
+    </tr>
+    <tr *ngFor="let item of [
+        {attribute: 'label?', type: 'string', default: '\'Filter by Range\'', description: 'Filter by range title', version: 'medes-ui@1.14.3 >'},
+        {attribute: 'min?', type: 'number', default: '0', description: 'Range Minimal', version: 'medes-ui@1.14.3 >'},
+        {attribute: 'max?', type: 'number', default: '1000', description: 'Range Miximal', version: 'medes-ui@1.14.3 >'},
+        {attribute: 'start', type: 'number', default: '∞', description: 'Starting point of range selection. If selected start range less than min value will be set as min value', version: 'medes-ui@1.14.3 >'},
+        {attribute: 'end', type: 'number', default: '∞', description: 'End point of range selection. If selected end range more than max value will be set as max value', version: 'medes-ui@1.14.3 >'},
+        {attribute: 'reset?', type: 'String', default: '✕', description: 'Content of reset group filter, html readeable.', version: 'medes-ui@1.14.3 >'},
+        {attribute: 'disabled?', type: 'boolean', default: 'false', description: 'For disabling filter range slider', version: 'medes-ui@1.14.3 >'}
+    ]">
+        <td mds-th-title="Attribute">{{item.attribute}}</td>
+        <td mds-th-title="Data Type">{{item.type}}</td>
+        <td mds-th-title="Default">{{item.default}}</td>
+        <td mds-th-title="Description">{{item.description}}</td>
+        <td mds-th-title="Support version">{{item.version}}</td>
+    </tr>
+</table>
+<small>
+    <b>Notes:</b>
+    <br/><i>? = Is optional value, if no value will use default value.</i>
+    <br/><i>∞ = Anything base on type</i>
+</small>

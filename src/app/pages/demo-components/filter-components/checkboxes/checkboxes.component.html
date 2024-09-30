@@ -3,21 +3,19 @@
 <hr/>
 
 <div class="mds-grid">
-    <div class="g-l-12">
+    <div class="g-l-70">
         <b>Component</b>
         <mds-hightlight-prism [code]="samplecomponent" language="typescript"></mds-hightlight-prism>
     </div>
-    <div class="g-l-70">
+    <div class="g-l-30">
         <b>HTML</b>
         <mds-hightlight-prism [code]="componentdemo" language="html"></mds-hightlight-prism>
-    </div>
-    <div class="g-l-30">
         <b>Preview</b>
         <mds-filter-checkbox
             [filterData]="sampledata"
-            [filterBy]="keys"
+            [filterBy]="peropKey"
             [filterSelected]="selected"
-            [titlegroup]="'Filter by'"
+            [titlegroup]="'Filter by Category'"
             [reset]="'✕'"
             [hideCounter]="false"
         ></mds-filter-checkbox>
@@ -27,21 +25,22 @@
 <b>Properties</b>
 <table class="mds-table">
     <tr>
-        <th>Attribute</th><th>Data Type</th><th>Default</th><th>Description</th><th>Support Version</th>
+        <th>Attribute</th><th>Data Type</th><th>Default</th><th>Description</th><th style="min-width: 200px;">Support Version</th>
     </tr>
     <tr *ngFor="let item of [
-        {attribute: 'filterData', type: 'Array', default: '∞', description: 'Sample data for create multiple filter checkbox', version: 'medes-ui@13.0.0 >'},
-        {attribute: 'filterBy', type: 'Array of String values', default: '∞', description: 'Listing of object keys/properties to filter', version: 'medes-ui@13.0.0 >'},
-        {attribute: 'filterSelected', type: 'Object', default: '∞', description: 'List of selected filter', version: 'medes-ui@13.0.0 >'},
-        {attribute: 'titlegroup?', type: 'String', default: 'Filter by', description: 'Prefix of label text of group', version: 'medes-ui@13.0.0 >'},
-        {attribute: 'reset?', type: 'String', default: '✕', description: 'Content of reset group filter, html readeable.', version: 'medes-ui@13.0.0 >'},
-        {attribute: 'hideCounter?', type: 'Boolean', default: 'false', description: 'Show/hide counter item. Or delete the attribute by default will showing', version: 'medes-ui@13.0.0 >'}
+        {attribute: 'filterData', type: 'Array', default: '∞', description: 'Sample data for create multiple filter checkbox', version: 'medes-ui@1.13.0 >'},
+        {attribute: 'filterBy <span class=\'new-beadge margin-l-1\'>New</span>', type: 'String', default: '∞', description: 'Newer version only support string value, value is property/key', version: 'medes-ui@1.14.3 >'},
+        {attribute: 'filterBy <i>(Old version)</i>', type: 'Array of String values', default: '∞', description: 'Listing of object keys/properties to filter', version: 'medes-ui@1.13.0 > medes-ui@1.14.2'},
+        {attribute: 'filterSelected', type: 'Object', default: '∞', description: 'List of selected filter', version: 'medes-ui@1.13.0 >'},
+        {attribute: 'titlegroup?', type: 'String', default: 'Filter by', description: 'Prefix of label text of group', version: 'medes-ui@1.13.0 >'},
+        {attribute: 'reset?', type: 'String', default: '✕', description: 'Content of reset group filter, html readeable.', version: 'medes-ui@1.13.0 >'},
+        {attribute: 'hideCounter?', type: 'Boolean', default: 'false', description: 'Show/hide counter item. Or delete the attribute by default will showing', version: 'medes-ui@1.13.0 >'}
     ]">
-        <td mds-th-title="Attribute">{{item.attribute}}</td>
+        <td mds-th-title="Attribute" [innerHTML]="item.attribute"></td>
         <td mds-th-title="Data Type">{{item.type}}</td>
         <td mds-th-title="Default">{{item.default}}</td>
         <td mds-th-title="Description">{{item.description}}</td>
-        <td mds-th-title="Support Version">{{item.version}}</td>
+        <td mds-th-title="Support Version" [innerHTML]="item.version"></td>
     </tr>
 </table>
 <small>

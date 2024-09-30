@@ -11,6 +11,7 @@ import { MdsHightlightPrismModule, MdsFilterModule, MdsPipesModule } from 'medes
 // import { MdsHightlightPrismModule, MdsFilterModule, MdsPipesModule } from 'projects/medes-ui/src/public-api';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { DemoFilterFilterRangeSliderComponent } from '../demo-filter-range-slider/demo-filter-range-slider.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CommonModule } from '@angular/common';
     SwatchComponent,
     ResetAllComponent,
     AlertSoonComponent,
-    DemoComponent
+    DemoComponent,
+    DemoFilterFilterRangeSliderComponent
   ],
   imports: [
     CommonModule,

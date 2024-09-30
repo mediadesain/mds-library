@@ -15,3 +15,12 @@ navbar .logo, mds-navbar .logo { background-image: url('./assets/images/medes-ui
 @media (prefers-color-scheme: dark) {
     mds-navbar .logo { background-image: url('./assets/images/medes-ui-dark.png'); }
 }
+
+.new-beadge {
+    background: var(--swatch-a);
+    color: var(--swatch-a-contrast);
+    padding: 0 3px;
+    font-size: xx-small;
+    margin-top: 3px;
+    border-radius: 3px;
+}

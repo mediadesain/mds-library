@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SelectedFilterSliderInterface } from 'medes-ui/lib/mds-filter/mds-filter.interface';
 import { SampleProductsData } from 'src/app/shared/constant/products';
 
 @Component({
@@ -9,7 +10,6 @@ import { SampleProductsData } from 'src/app/shared/constant/products';
 export class FilterComponentsComponent implements OnInit {
   sampledata = [];
   selected = {};
-  key = 'color';
   colormap = {
       'blue-sky': '#66ccdd',
       maroon: '#bb6a66',
@@ -18,13 +18,19 @@ export class FilterComponentsComponent implements OnInit {
       purple: '#6a66bb',
       gold: '#b6ab66'
   };
+  filterRangeSelected: SelectedFilterSliderInterface = {
+    min: 20,
+    max: 120,
+    start: 25,
+    end: 50
+  };
 
 checkboxComponent = `
 <!-- Filter Checkboxes Component - Multiple Group -->
 <mds-filter-checkbox
-  [titlegroup]="'Filter by'"
+  [titlegroup]="'Filter by Category'"
   [filterData]="sampledata"
-  [filterBy]="['gender','category']"
+  [filterBy]="'category'"
   [filterSelected]="selected"
   [reset]="'✕'"
   [hideCounter]="false"
@@ -35,16 +41,31 @@ swatchComponent = `
 <mds-filter-swatch
   [titlegroup]="'Filter by Color'"
   [filterData]="sampledata"
-  [filterBy]="key"
+  [filterBy]="'color'"
   [filterSelected]="selected"
   [swatchMapping]="colormap"
   [swatchSize]="30"
   [swatchRadius]="25"
 ></mds-filter-swatch>`;
 
+rangeSliderComponent = `
+<!-- Demo Filter Range Slider Component -->
+<mds-filter-range-slider
+  [label]="'Filter by something'"
+  [min]="20"
+  [max]="100"
+  [(start)]="25"
+  [(end)]="40"
+  [disabled]="false"
+></mds-filter-range-slider>`;
+
 resetComponent = `
 <!-- Reset Filter Component -->
-<mds-filter-reset [content]="'Reset All'" [(filterSelected)]="selected"></mds-filter-reset>`;
+<mds-filter-reset
+  [content]="'Reset All'"
+  [(filterSelected)]="selected"
+  [(filterRangeSelected)]="filterRangeSelected">
+</mds-filter-reset>`;
 
 
 importmodule = `
@@ -53,7 +74,7 @@ import { MdsFilterModule } from 'medes-ui';
 @NgModule({
   declarations: [ ... ],
   imports: [
-    MdsFilterModule
+    MdsFilterModule  // Ignore importing module if using standalone component
   ]
 })
 

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./aside.component.scss']
 })
 export class AsideComponent {
-  menu: {title: string; links: {text: string; url: string}[]}[] = [
+  menu: {title: string; links: {text: string; url: string, isNew?: boolean}[]}[] = [
     {
       title: 'MedesUI',
       links: [
@@ -26,9 +26,10 @@ export class AsideComponent {
       title: 'Filter Components',
       links: [
         {text: 'Intro', url: '/filter-components/intro'},
-        {text: 'Checkboxes Filter', url: '/filter-components/checkboxes'},
+        {text: 'Checkboxes Filter', url: '/filter-components/checkboxes', isNew: true},
         {text: 'Swatch Filter', url: '/filter-components/swatch'},
-        {text: 'Reset Filter', url: '/filter-components/reset'},
+        {text: 'Range Slider', url: '/filter-components/range-slider', isNew: true},
+        {text: 'Reset Filter', url: '/filter-components/reset', isNew: true},
         {text: '<i class="fas fa-external-link-alt"></i> Demo', url: '/filter-components/demo'}
       ]
     }, {
@@ -47,6 +48,7 @@ export class AsideComponent {
       title: 'Pipes',
       links: [
         {text: 'Filter', url: '/pipe/filter'},
+        {text: 'Filter by Range', url: '/pipe/filter-range', isNew: true},
         {text: 'Search', url: '/pipe/search'},
         {text: 'Safe Url', url: '/pipe/safeurl'}
       ]
@@ -70,5 +72,5 @@ export class AsideComponent {
       behavior: 'smooth'
     });
   }
-  
+
 }

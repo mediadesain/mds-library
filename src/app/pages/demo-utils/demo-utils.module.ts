@@ -7,6 +7,7 @@ import { DateUtilsComponent } from './date-utils/date-utils.component';
 import { NumberUtilsComponent } from './number-utils/number-utils.component';
 import { ObjectUtilsComponent } from './object-utils/object-utils.component';
 import { StringUtilsComponent } from './string-utils/string-utils.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { StringUtilsComponent } from './string-utils/string-utils.component';
     StringUtilsComponent
   ],
   imports: [
+    CommonModule,
     MdsHightlightPrismModule,
     DemoUtilsRoutingModule
   ]

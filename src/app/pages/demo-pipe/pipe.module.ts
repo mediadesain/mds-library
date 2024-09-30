@@ -5,9 +5,11 @@ import { DemoSafeurlPipeComponent } from './demo-safeurl-pipe/demo-safeurl-pipe.
 import { DemoSearchPipeComponent } from './demo-search-pipe/demo-search-pipe.component';
 import { MdsHightlightPrismModule, MdsPipesModule } from 'medes-ui';
 import { CommonModule } from '@angular/common';
+import { DemoFilterRangePipeComponent } from './demo-filter-range-pipe/demo-filter-range-pipe.component';
 
 @NgModule({
-  declarations: [DemoFilterPipeComponent, DemoSafeurlPipeComponent, DemoSearchPipeComponent],
+  declarations: [DemoFilterPipeComponent, DemoSafeurlPipeComponent, DemoSearchPipeComponent, DemoFilterRangePipeComponent],
   imports: [CommonModule, MdsHightlightPrismModule, PipeRoutingModule, MdsPipesModule]
 })
+
 export class PipeModule { }

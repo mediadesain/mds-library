@@ -1,6 +1,6 @@
 {
   "name": "medes-ui-boilerplate",
-  "version": "1.13.4",
+  "version": "1.13.6",
   "scripts": {
     "ng": "ng",
     "start": "ng lint && ng serve --port 4600",
@@ -8,6 +8,7 @@
     "build:doc": "ng build --configuration production",
     "build:lib": "rm -rf node_modules/medes-ui && ng build medes-ui --configuration production && cp -R dist/medes-ui node_modules/",
     "publish:lib": "ng build medes-ui --configuration production && cd dist/medes-ui && npm publish",
+    "publish:ltslib": "ng build medes-ui --configuration production && cd dist/medes-ui && npm publish --tag v1.13-lts",
     "publishbeta:lib": "ng build medes-ui --configuration production && cd dist/medes-ui && npm publish --tag beta",
     "test": "ng test",
     "lint": "ng lint"
@@ -23,7 +24,7 @@
     "@angular/platform-browser-dynamic": "~13.3.11",
     "@angular/router": "~13.3.11",
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "medes-ui": "^1.13.4",
+    "medes-ui": "1.13.6",
     "prismjs": "^1.26.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
